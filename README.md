@@ -56,7 +56,8 @@ while True:
     print(s.recv(1024).decode())
 ```
 ## Output
-![Screenshot (68)](https://github.com/user-attachments/assets/ca518039-5377-4873-92a0-3bb95fbc2b9c)
+<img width="1909" height="768" alt="image" src="https://github.com/user-attachments/assets/89958b27-7ce3-4b65-a341-8bd36c617636" />
+
 
 ## Result
 Thus Execution of Network commands Performed 
