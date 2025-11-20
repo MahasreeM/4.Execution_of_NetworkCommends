@@ -27,36 +27,26 @@ This commands includes
 <BR>
 • Other IP Commands e.g. show ip route etc.
 <BR>
-## PROGRAM:
-
-```
-CLIENT
-import socket
-from pythonping import ping
-s=socket.socket()
-s.bind(('localhost',8000))
-s.listen(5)
-c,addr=s.accept()
-while True:
-    hostname=c.recv(1024).decode()
-    try:
-        c.send(str(ping(hostname, verbose=False)).encode())
-    except KeyError:
-        c.send("Not Found".encode())
 
 
-SERVER
-
-import socket
-s=socket.socket()
-s.connect(('localhost',8000))
-while True:
-    ip=input("Enter the website you want to ping ")
-    s.send(ip.encode())
-    print(s.recv(1024).decode())
-```
 ## Output
-<img width="1909" height="768" alt="image" src="https://github.com/user-attachments/assets/89958b27-7ce3-4b65-a341-8bd36c617636" />
+### NETSTAT:
+
+<img width="1278" height="1021" alt="Screenshot 2025-11-02 103907" src="https://github.com/user-attachments/assets/3aca20d3-c60f-489d-9340-99d0a70f2557" />
+
+### PING:
+
+<img width="1347" height="491" alt="Screenshot 2025-11-02 104000" src="https://github.com/user-attachments/assets/2aedffe3-dd7e-4a9d-92df-0107b7b48ce7" />
+### TRACERT:
+
+<img width="1333" height="314" alt="Screenshot 2025-11-02 104025" src="https://github.com/user-attachments/assets/d859ee84-6eb3-4a7e-890b-d8e64d90b4af" />
+### NSLOOKUP:
+
+<img width="746" height="275" alt="Screenshot 2025-11-02 104207" src="https://github.com/user-attachments/assets/5564988d-af4d-46f9-8714-e41f143a7e5b" />
+
+### HOSTNAME:
+
+<img width="615" height="59" alt="Screenshot 2025-11-02 105107" src="https://github.com/user-attachments/assets/10b86bdc-4104-4985-9f92-6e672dbed211" />
 
 
 ## Result
